@@ -5,6 +5,8 @@
 - **Published artifacts checked:** npm `@runfusion/fusion@0.77.0` (`latest`), npm `runfusion.ai@0.77.0`, npm `@earendil-works/pi-telemetry@1.1.0`
 - **Question asked:** "Is it safe to run Fusion? What telemetry does it have, what does it collect, and how safe is its supply chain?"
 
+> **Status (2026-11-21):** first pass complete. This document is the plan for the audit: the remaining work is the [Open items](#open-items) checklist, and nothing else tracks it. Branch `docs/security-privacy-audit`, PR ExactDoug/fusion#1 (fork only; never open it against upstream `Runfusion/Fusion`). Suggested order for the next pass, chosen by how much each item affects the adoption decision: Docker image → sandbox backends → worktree dependency installs → default secret policy → remote access → dashboard API authorization → pricing-fetch opt-out → tarball-versus-source check.
+
 ## Scope and method
 
 This is a **targeted source review**, not a full security audit. It answers an operator's adoption questions by reading code, configuration and published npm metadata. Every claim below cites the file it rests on. Items that were *not* verified are listed under [Open items](#open-items), and should not be read as cleared.
